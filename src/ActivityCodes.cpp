@@ -75,12 +75,15 @@ void loop() {
         dataFile.print(timeSeconds); // Write time
         dataFile.print(","); // Write comma
         dataFile.println(sensorValue); // Write value
+        
         dataFile.close(); // Close the file
+        
         Serial.println("Data Saved");
     }  
     else {
         Serial.println("Error Opening File");
     }
+    
     Serial.println(position);
     delay(1000);
 
